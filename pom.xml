@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>vframework-core</artifactId>
+  <version>${vframework-core.version}</version>
+  <name>vframework</name>
+  <packaging>jar</packaging>
+  
+  <parent>
+  	<groupId>com.vframework</groupId>
+  	<artifactId>vframework-pom</artifactId>
+  	<version>${vframework-pom.version}</version>
+  	<relativePath>../vframework-pom/pom.xml</relativePath>
+  </parent>
+  
+  <build>
+  	<finalName>vframework-core-${project.version}-${maven.build.timestamp}</finalName>
+  	
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>${maven.compiler.plugin.version}</version>
+  			<configuration>
+  				<source>${java.version}</source>
+  				<target>${java.version}</target>
+  				<encoding>${project.build.sourceEncoding}</encoding>
+  				<debug>true</debug>
+  				<showDeprecation>true</showDeprecation>
+  				<showWarnings>true</showWarnings>
+  			</configuration>
+  		</plugin>
+  	</plugins>	
+  </build>
+  
+</project>
